@@ -75,24 +75,40 @@ public class ListaSimple<M> {
     }
 
     //Revisar
-    public void eliminarInicio(M dato) {
+    public Object eliminarInicio(M dato) {
 
         if (inicio == null) {
             System.out.println("Lista vacía");
 
         }
-        Nodo<M> elementoEliminado = inicio;
-        if (inicio == ultimo) {
-            inicio = ultimo = null;
+        Object elementoEliminado = inicio.getDato();
+        if (this.inicio == this.ultimo) {
+            this.inicio = this.ultimo = null;
         } else {
-            inicio = inicio.getSiguiente();
+            this.inicio = inicio.getSiguiente();
 
         }
-
+        return elementoEliminado;
     }
 
-    public void eliminarFinal(M dato) {
-
+    public Object eliminarFinal(M dato) {
+        
+        if(inicio == null){
+            System.out.println("Lista vacia");
+        }
+        Object elementoEliminado = this.ultimo.getDato();
+        if(this.inicio == this.ultimo){
+            this.inicio = this.ultimo = null;
+        }
+        else{
+            Nodo actual = this.ultimo;
+            while(actual.getSiguiente() != this.ultimo){
+            actual = actual.getSiguiente();
+            }
+            actual.setSiguiente(null);
+            this.ultimo = actual;
+        }
+            return elementoEliminado;
     }
 
     public void buscar() {
@@ -105,7 +121,7 @@ public class ListaSimple<M> {
         if (inicio == null) {
             System.out.println("Vacia");
         } else {
-            Nodo n = inicio;
+            Nodo n = this.inicio;
             while (n != null) {
                 System.out.println(n.getDato().toString());
                 n = n.getSiguiente();
