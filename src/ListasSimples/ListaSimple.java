@@ -82,7 +82,7 @@ public class ListaSimple<M> {
            this.add(dato);
         }
         else{ 
-                ultimo = getPos(this.size-1);
+                ultimo = getPos(this.size);
                 Nodo<M> nuevo = new Nodo(dato, null);
                 
                 ultimo.setSiguiente(nuevo);
@@ -94,7 +94,7 @@ public class ListaSimple<M> {
     //Este método nos ayuda a obtener la posición en la que se encuntra un elemento en la lista
      private Nodo<M> getPos(int i)  {
         if (inicio == null || i < 0 || i >= this.getSize()) {
-            System.out.println("Indice supera el size");
+           
         }
 
         Nodo<M> aux = this.inicio;
