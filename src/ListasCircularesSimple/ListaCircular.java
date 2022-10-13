@@ -6,7 +6,7 @@ package ListasCircularesSimple;
 
 /**
  *
- * @author Usuario
+ *@author Bryan Delgado - bryanadriands@ufps.edu.co
  */
 public class ListaCircular <E> {
 private Nodo<E> inicio;

@@ -6,7 +6,7 @@ package Pilas;
 
 /**
  *
- * @author estudiante
+ * @author Bryan Delgado - bryanadriands@ufps.edu.co
  */
 public class PilasSimples <E> {
     private Nodo <E> cima;

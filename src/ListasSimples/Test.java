@@ -6,7 +6,7 @@ package ListasSimples;
 
 /**
  *
- * @author Usuario
+ * @author Bryan Delgado - bryanadriands@ufps.edu.co
  */
 public class Test {
 
@@ -37,7 +37,8 @@ public class Test {
         l2.eliminarInicio(Integer.SIZE);
         System.out.println("Eliminando el ultimo dato de la lista que se agrega por el inicio: " + l2.toString());
        
-        l2.buscar(3);
+        l2.buscar(7);
+        System.out.println("" +l2.toString());
        
         
         l2.elimarLista(Integer.SIZE);

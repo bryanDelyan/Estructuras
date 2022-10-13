@@ -4,12 +4,9 @@
  */
 package ListasSimples;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
- * @author ufps
+ * @author Bryan Delgado - bryanadriands@ufps.edu.co
  * @param <M>
  */
 public class ListaSimple<M> {
@@ -146,7 +143,7 @@ public class ListaSimple<M> {
         }
         return elementoEliminado;
     }
-
+            //Podemos convertir ese dato a un nodo para compararlos?
     public void buscar(M dato) {
         Nodo actual = new Nodo();
         actual = inicio;
@@ -189,4 +186,12 @@ public class ListaSimple<M> {
                 n = n.getSiguiente();
             }
         }*/
+    
+     public void imprimir(){
+        Nodo aux = inicio;
+        while(aux != null){
+            System.out.println("Dato: "+aux.getDato());
+            aux = aux.getSiguiente();
+        }
+    }
 }

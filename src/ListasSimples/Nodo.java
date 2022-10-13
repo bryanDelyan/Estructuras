@@ -6,7 +6,7 @@ package ListasSimples;
 
 /**
  *
- * @author ufps
+ * @author Bryan Delgado - bryanadriands@ufps.edu.co
  * @param <M>
  */
 public class Nodo <M> {

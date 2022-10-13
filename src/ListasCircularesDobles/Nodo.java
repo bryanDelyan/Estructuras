@@ -6,7 +6,7 @@ package ListasCircularesDobles;
 
 /**
  *
- * @author Usuario
+ * @author Bryan Delgado - bryanadriands@ufps.edu.co
  */
 public class Nodo<E> {
     private E dato;

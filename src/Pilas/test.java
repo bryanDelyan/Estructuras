@@ -3,7 +3,7 @@ package Pilas;
 
 /**
  *
- * @author 
+ * @author Bryan Delgado - bryanadriands@ufps.edu.co
  */
 public class test {
     public static void main(String[] args) {

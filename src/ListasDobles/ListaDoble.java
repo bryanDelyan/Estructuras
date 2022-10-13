@@ -6,7 +6,7 @@ package ListasDobles;
 
 /**
  *
- * @author Usuario
+ * @author Bryan Delgado - bryanadriands@ufps.edu.co
  */
 public class ListaDoble<E> {
 
@@ -126,6 +126,13 @@ public class ListaDoble<E> {
            msg += x.getDato().toString() + "->";
         }
         return (msg) + "null";
+    }
+     public void imprimir(){
+        Nodo aux = inicio;
+        while(aux != null){
+            System.out.println("Dato: "+aux.getDato());
+            aux = aux.getSiguiente();
+        }
     }
     
 
