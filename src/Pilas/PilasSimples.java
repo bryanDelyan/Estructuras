@@ -10,8 +10,11 @@ package Pilas;
  */
 public class PilasSimples <E> {
     private Nodo <E> cima;
+    private int tamanio;
 
     public PilasSimples() {
+        tamanio = 0;
+        cima = null;
     }
 
     public PilasSimples(Nodo<E> cima) {
@@ -30,10 +33,12 @@ public class PilasSimples <E> {
     
         return cima == null;
     }
+   
     public void apilar(E dato){
      Nodo aux;
      aux= new Nodo (dato,cima);
      cima = aux;
+     tamanio++;
     
        
    
@@ -48,11 +53,41 @@ public class PilasSimples <E> {
         }
         resultado = cima.getDato();
         cima = cima.getSiguiente();
-       
+       tamanio--;
         return resultado;
         
         
    
+    }
+    
+    public int size(){
+       
+        return tamanio;
+    }
+    
+    public boolean buscar(E dato){
+         Nodo<E> aux = this.cima;
+        while (aux != null) {
+            if (aux.getDato().equals(dato)) {
+                return true;
+            }
+            aux = aux.getSiguiente();
+        }
+        return false;
+    }
+    public void desapilarEspecifico(E dato) {
+        while (buscar(dato)) {
+            if (cima.getDato() == dato) {
+                cima = cima.getSiguiente();
+            } else {
+                Nodo<E> aux = cima;
+        while (aux.getSiguiente().getDato() != dato) {
+                    aux = aux.getSiguiente();
+                }
+                Nodo<E> siguiente = aux.getSiguiente().getSiguiente();
+                aux.setSiguiente(siguiente);
+            }
+        }
     }
     
     public void listar(){
