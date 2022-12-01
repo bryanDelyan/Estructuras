@@ -6,7 +6,6 @@ package Actividad1SP.Ejercicios;
  */
 
 
-import Actividad1SP.Ejercicios.Cola1;
 import ColasSimples.Cola;
 
 /**

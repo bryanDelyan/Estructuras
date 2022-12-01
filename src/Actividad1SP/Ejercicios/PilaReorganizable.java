@@ -10,7 +10,7 @@ import Pilas.PilasSimples;
  */
 public class PilaReorganizable {
     //int elemento = 0;
-    PilasSimples p = new PilasSimples();
+    //PilasSimples aux = new PilasSimples();
 
     public PilaReorganizable() {
    //     elemento = 0;
@@ -30,33 +30,22 @@ public class PilaReorganizable {
     p.listar();
     }
     
-    /*public void eliminarDato(PilasSimples<Integer> p,int dato){
-       // Nodo aux = new Nodo();
-      int elemento; 
-        if(!p.esVacia()){
-            elemento = (int) p.desapilar();
-            if(elemento != dato){
-                
-                eliminarDato(p,dato);
-                p.apilar(elemento);
-               
-               
-                
+    /*
+        public void reorganizable(Pila<Integer> pila, int n) {
+
+        while (!pila.esVacia()) {
+            aux = pila.dePilar();
+            if (n != aux) {
+                pilaAux.apilar(aux);
             }
-            
-            
         }
-        
-    } */
-   //Funciona el método pero no elima el número al cual pasamos a la cima, cuando este se repite
-   
-    
-    /*public void pilaReorganizable(PilasSimples p1, int dato){
-        
-        eliminarDato(p1,dato);
-        p1.apilar(dato);
-        p1.listar();
-        
+        while (!pilaAux.esVacia()) {
+            pila.apilar(pilaAux.dePilar());
+        }
+
+        pila.apilar(n);
+        pila.listar();
+    }
     }*/
     
     

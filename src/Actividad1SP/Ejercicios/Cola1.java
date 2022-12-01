@@ -40,7 +40,7 @@ public class Cola1 {
 
         Cola aux = new Cola();
        while(!q.esVacia()){
-           int n = (Integer)(q.desencolar());
+           int n = q.desencolar();
            if(a != n){
                aux.encolar(n);
            }
